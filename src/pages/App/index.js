@@ -11,10 +11,10 @@ const App = () => {
   return (
     <AppWrapper>
       <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
+        titleTemplate="랜덤 유저 어플리케이션"
+        defaultTitle="랜덤 유저 어플리케이션"
       >
-        <meta name="description" content="A React.js Boilerplate application" />
+        <meta name="description" content="랜덤 유저 어플리케이션" />
       </Helmet>
       <Switch>
         <Route exact path="/" component={LandingPage} />
