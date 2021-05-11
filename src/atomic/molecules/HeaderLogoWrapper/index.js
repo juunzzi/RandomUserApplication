@@ -6,10 +6,11 @@ const Wrapper = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
-function HeaderLogoWrapper() {
+function HeaderLogoWrapper({ onHomeLogoClick }) {
   return (
-    <Wrapper>
+    <Wrapper onClick={onHomeLogoClick}>
       <Logo></Logo>
     </Wrapper>
   );
