@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  & span:not(:last-child) {
+  & a:not(:last-child) {
     margin-right: 20px;
   }
 `;
