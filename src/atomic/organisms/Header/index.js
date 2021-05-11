@@ -5,6 +5,7 @@ import HeaderLogoWrapper from "../../molecules/HeaderLogoWrapper";
 const Wrapper = styled.div`
   width: 100%;
   padding: 40px 0;
+  position: fixed;
   /* & div:first-child {
     margin-left: 50px;
   } */
@@ -15,11 +16,11 @@ const Inner = styled.div`
   margin: 0 auto;
 `;
 
-function Header() {
+function Header(props) {
   return (
     <Wrapper>
       <Inner>
-        <HeaderLogoWrapper></HeaderLogoWrapper>
+        <HeaderLogoWrapper {...props}></HeaderLogoWrapper>
         <HeaderIconWrapper></HeaderIconWrapper>
       </Inner>
     </Wrapper>
