@@ -3,7 +3,7 @@ const size = {
   desktop: "1920px",
 };
 const theme = {
-  mainColor: "#white",
+  mainColor: "#ffffff",
   mobile: `(max-width:${size.mobile})`,
   desktop: `(max-width:${size.desktop})`,
 };
