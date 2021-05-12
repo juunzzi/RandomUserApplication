@@ -13,7 +13,10 @@ const Wrapper = styled.div`
 const Inner = styled.div`
   display: flex;
   max-width: 1100px;
+  min-width: 300px;
+
   margin: 0 auto;
+  padding: 0 20px;
 `;
 
 function Header(props) {

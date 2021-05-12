@@ -7,6 +7,8 @@ const Wrapper = styled.div`
 const Inner = styled.div`
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
+  min-width: 300px;
 `;
 function Footer() {
   return (
