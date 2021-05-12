@@ -5,13 +5,19 @@ import App from "./pages/App";
 import theme from "./style/theme";
 import { BrowserRouter } from "react-router-dom";
 import AppLayout from "./components/common/AppLayout";
-
+import { SWRConfig } from "swr";
+import { fetcher } from "./api/fetcher";
+const SWRoption = {
+  fetcher: fetcher,
+};
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <AppLayout>
-          <App />
+          <SWRConfig value={SWRoption}>
+            <App />
+          </SWRConfig>
         </AppLayout>
       </BrowserRouter>
     </ThemeProvider>
