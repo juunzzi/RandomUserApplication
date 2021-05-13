@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import useSWR from "swr";
+import UserContent from "../../components/ExplorePage/UserContent";
+import useUsers from "../../hooks/useUsers";
 const Wrapper = styled.div`
   height: 100vh;
   display: flex;
@@ -15,13 +16,17 @@ const Content = styled.div`
   padding: 20px;
 `;
 const ExploreUsersPage = () => {
-  const { data, error } = useSWR(["https://randomuser.me/api/?results=10"]);
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  const { users, error } = useUsers({ query: 50 });
+
   return (
     <Wrapper>
-      <Content>{/* 이미지 아이템 */}</Content>
+      <Content>
+        {/* 이미지 아이템 */}
+        {users &&
+          users.map((user, idx) => (
+            <UserContent key={user.phone} idx={idx}></UserContent>
+          ))}
+      </Content>
     </Wrapper>
   );
 };
