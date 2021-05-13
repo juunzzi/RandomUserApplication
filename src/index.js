@@ -9,6 +9,7 @@ import { SWRConfig } from "swr";
 import { fetcher } from "./api/fetcher";
 const SWRoption = {
   fetcher: fetcher,
+  revalidateOnFocus: false,
 };
 ReactDOM.render(
   <React.StrictMode>

@@ -1,3 +1,5 @@
+export const GET_USER_ALL = "https://randomuser.me/api/?results=";
+
 export const fetcher = async (...args) => {
   // 인자들이 배열로 온다.
   const res = await fetch(...args);
