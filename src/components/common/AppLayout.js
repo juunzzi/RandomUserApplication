@@ -1,10 +1,16 @@
 import React, { useCallback } from "react";
 import styled from "styled-components";
-import Footer from "../../atomic/organisms/Footer";
-import Header from "../../atomic/organisms/Header";
 import { useHistory } from "react-router-dom";
 const Wrapper = styled.div``;
-const Contents = styled.div``;
+const Contents = styled.div`
+  max-width: 1100px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 50px;
+  box-sizing: border-box;
+
+  border: 1px solid black;
+`;
 
 const AppLayout = ({ children }) => {
   const history = useHistory();
@@ -14,9 +20,7 @@ const AppLayout = ({ children }) => {
 
   return (
     <Wrapper>
-      <Header onHomeLogoClick={onHomeLogoClick}></Header>
       <Contents>{children}</Contents>
-      <Footer></Footer>
     </Wrapper>
   );
 };
