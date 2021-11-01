@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import GlobalStyle from "../../style/global";
 import LandingPage from "../LandingPage";
 import { Switch, Route } from "react-router-dom";
-import ExploreUsersPage from "../ExploreUsersPage";
-import UserDetailPage from "../UserDetailPage";
+import Create from "../Create";
+import List from "../List";
 const AppWrapper = styled.div``;
 const App = () => {
   return (
@@ -18,8 +18,8 @@ const App = () => {
       </Helmet>
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/users" component={ExploreUsersPage} />
-        <Route path="/users/:id" component={UserDetailPage} />
+        <Route exact path="/create" component={Create} />
+        <Route exact path="/list" component={List} />
       </Switch>
       <GlobalStyle></GlobalStyle>
     </AppWrapper>
