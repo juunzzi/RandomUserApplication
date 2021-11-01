@@ -11,15 +11,16 @@ const SWRoption = {
   fetcher: fetcher,
   revalidateOnFocus: false,
 };
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <AppLayout>
-          <SWRConfig value={SWRoption}>
+        <SWRConfig value={SWRoption}>
+          <AppLayout>
             <App />
-          </SWRConfig>
-        </AppLayout>
+          </AppLayout>
+        </SWRConfig>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
